@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><a href="/">Home</a></h1>
+    <h1><a href="/first_app/about/">about</a></h1>
+    <h1><a href="/first_app/contact/">contact</a></h1>
+
+    <h3>The context values are:</h3>
+    <h4>Author: {{author}}</h4>
+    <h4>Age: {{age}}</h4>
+    {{list}}
+
+    <!-- using template filter -->
+    <h2>{{ list | join:" -- " }}</h2>
+    <h1>{{ birthday | date:"D d M Y" }}</h1>
+    <h1>{{ courses | length }}</h1>
+    <h3>{{ value | add:"5" }}</h3>
+    <h4>{{ author | capfirst }}</h4>
+    <h4>{{ months | cut:"-" }}</h4>
+    <h4>{{ users | dictsort:"age" }}</h4>
+    <h4>{{ list | first }}</h4>
+    <h4>{{ list | last }}</h4>
+    <h4>{{ list | linenumbers }}</h4>
+    <h4>{{ months | lower }}</h4>
+    <h4>{{ months | upper }}</h4>
+    <h4>{{ users | slice:":2" }}</h4>
+    <h4>{{ birthday | time:"H:i" }}</h4>
+  </body>
+</html>
